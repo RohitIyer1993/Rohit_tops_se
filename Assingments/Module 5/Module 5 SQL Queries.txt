@@ -1,0 +1,102 @@
+TASK:
+1.)
+CREATE TABLE Student(
+    RollNo int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    Name varchar(50) NOT NULL,
+    Branch varchar (50) NOT NULL
+    );
+INSERT INTO `student`(`RollNo`, `Name`, `Branch`) VALUES ('1','Jay','Comp Science'),
+('2','Suhani','Elec and Comm'),
+('3','Kriti','Elec and Comm');
+
+CREATE TABLE exam(
+    RollNo int(50) NOT NULL,
+    S_Code varchar(50) NOT NULL,
+    Marks int(50) NOT NULL,
+    P_Code varchar(50) NOT NULL,
+    FOREIGN KEY(Rollno) REFERENCES student(Rollno)
+    );
+
+INSERT INTO `exam`(`RollNo`, `S_Code`, `Marks`, `P_Code`) 
+VALUES ('1','CS11','50','CS'),
+        	      ('1','CS12','60','CS'),
+	      ('2','EC101','66','EC'),
+	      ('2','EC102','70','EC'),
+	      ('3','EC101','45','EC'),
+                ('3','EC102','50','EC');
+
+2.)
+CREATE TABLE Customer(
+    FirstName varchar(50) NOT NULL,
+    LastName varchar(50) NOT NULL,
+    Address varchar(50) NOT NULL,
+    City varchar(50) NOT NULL,
+    Age int(50) NOT NULL);
+INSERT INTO `customer`(`FirstName`, `LastName`, `Address`, `City`, `Age`) 
+VALUES ('Mickey','Mouse','123 Fantasy Way','Anaheim','73'),
+('Bat','Man','321 Cavern Ave','Gotham','54'),
+('Wonder','Woman','987 Truth Way','Paradise','39'),
+('Donald','Duck','555 Quackk Street','Mallard','65'),
+('Bugs','Bunny','567 Carrot Street','Rascal','58'),
+('Wiley','Coyote','999 Acme Way','Canyon','61'),
+('Cat','Woman','234 Purrfect Street','Hairball','32'),
+('Tweety','Bird','543','Itotlaw','28');
+
+3.)
+CREATE TABLE employee(
+    Employee_ID int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    FirstName varchar(50) NOT NULL,
+    LastName varchar(50) NOT NULL,
+    Salary int(50) NOT NULL,
+    Joining_Date varchar(50) NOT NULL,
+    Department varchar(50) NOT NULL);
+    )
+
+CREATE TABLE Incentive(
+    Employee_ref_ID int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    Incentive_Date varchar(50) NOT NULL,
+    Incentive_amount int(50) NOT NULL);
+
+SELECT * FROM employee1 where FirstName = 'Tom';
+SELECT FirstName, Joining_Date, Salary FROM employee1;
+SELECT * FROM employee1 order by FirstName;
+SELECT * FROM employee1 order by Salary DESC;
+SELECT * FROM employee1 WHERE Firstname LIKE 'J%';
+SELECT Department, max(Salary) FROM employee1 group by Department;
+
+4.)
+CREATE TABLE SALESPERSON(
+    SNo int PRIMARY KEY NOT NULL,
+    SName varchar(50) NOT NULL,
+    SCITY varchar(50) NOT NULL,
+    COMM varchar(50) NOT NULL
+    );
+INSERT INTO `salesperson`(`SNo`, `SName`, `SCITY`, `COMM`)
+VALUES ('1001','Peel','London','.12'),
+('1002','Serres','San Jose','.13'),
+('1004','Motika','London','.11'),
+('1007','Rafkin','Barcelona','.15'),
+('1003','Axelrod','New York','.1');
+
+CREATE TABLE CUSTOMER1(
+    CNM int PRIMARY KEY NOT NULL,
+    CName varchar(50) NOT NULL,
+    CITY varchar(50) NOT NULL,
+    RATING varchar(50) NOT NULL,
+    F_SNo int(50) NOT NULL,
+    FOREIGN KEY(F_SNo) REFERENCES salesperson(SNo)
+    );
+
+INSERT INTO `rohit1`.`customer1` (`CNM`, `CName`, `CITY`, `RATING`, `F_SNo`) VALUES ('201', 'Hoffman', 'London', '100', '1001');
+INSERT INTO `rohit1`.`customer1` (`CNM`, `CName`, `CITY`, `RATING`, `F_SNo`) VALUES ('202', 'Giovanni', 'Rome', '200', '1003');
+INSERT INTO `rohit1`.`customer1` (`CNM`, `CName`, `CITY`, `RATING`, `F_SNo`) VALUES ('203', 'Liu', 'San Jose', '300', '1002');
+INSERT INTO `rohit1`.`customer1` (`CNM`, `CName`, `CITY`, `RATING`, `F_SNo`) VALUES ('204', 'Grass', 'Barcelona', '100', '1002');
+INSERT INTO `rohit1`.`customer1` (`CNM`, `CName`, `CITY`, `RATING`, `F_SNo`) VALUES ('206', 'Clemens', 'London', '300', '1007');
+INSERT INTO `rohit1`.`customer1` (`CNM`, `CName`, `CITY`, `RATING`, `F_SNo`) VALUES ('207', 'Pereira', 'Rome', '100', '1004');
+
+SELECT SName FROM salesperson WHERE SCITY = 'London' AND COMM >.12;
+SELECT SName FROM salesperson WHERE SCITY = 'London' OR SCITY = 'BARCELONA';
+SELECT CName FROM customer1 WHERE CITY = 'London' OR CITY = 'BARCELONA';
+SELECT SName FROM salesperson WHERE COMM >.10 AND COMM <.12;
+SELECT CName FROM customer1 WHERE RATING <=100 AND CITY = 'ROME';
+
