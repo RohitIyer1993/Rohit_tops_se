@@ -1,0 +1,516 @@
+																	MODULE (CSS & CSS3) – 2
+
+Q1.) What is the benefit of using CSS?
+A1.) The advantages of using CSS are:
+	CSS plays an important role, by using CSS you simply got to specify a repeated style for element once & use it multiple times as because CSS will automatically apply the required styles.
+	The main advantage of CSS is that style is applied consistently across variety of sites. One instruction can control several areas which is advantageous.
+	Web designers needs to use few lines of programming for every page improving site speed.
+	Cascading sheet not only simplifies website development, but also simplifies the maintenance as a change of one line of code affects the whole web site and maintenance time.
+	It is less complex therefore the effort is significantly reduced.
+	It helps to form spontaneous and consistent changes.
+	CSS changes are device friendly. With people employing a batch of various range of smart devices to access websites over the web, there’s a requirement for responsive web design.
+	Easy for the user to customize the online page
+	It reduces the file transfer size.
+
+Q2.) What are the disadvantages of CSS?
+A2.) The disadvantages of CSS are:
+	CSS, CSS 1 up to CSS3, result in creating of confusion among web browsers.
+	With CSS, what works with one browser might not always work with another. The web developers need to test for compatibility, running the program across multiple browsers.
+	There exists a scarcity of security.
+	After making the changes we need to confirm the compatibility if they appear. The similar change affects on all the browsers.
+	The programming language world is complicated for non-developers and beginners. Different levels of CSS i.e. CSS, CSS 2, CSS 3 are often quite confusing.
+	Browser compatibility (some styles sheets are supported and some are not).
+	There might be cross-browser issues while using CSS.
+	There are multiple levels which creates confusion for non-developers and beginners.
+Q3.) What is the difference between CSS2 and CSS3?
+A3.) The difference between CSS2 and CSS3 is that CSS3 is now split into different modules. Since each module makes its way through the W3C individually, there’s a wider range of browser support. 
+	Multiple Backgrounds: Background-image, background-position and background-repeat can now be used to specify multiple background images to be layered on top of one another. The first image is closest to the user, with the following images to be layered behind. If there is a background color, it’s painted below all the image layers. For example, 
+#example1 {
+background-image: url(sheep.png), url(betweengrassandsky.png);
+background-position: center bottom, left top;
+background-repeat: no-repeat;
+background-color:red
+}
+
+	New Background Style Properties: Background-clip: how the background image should be clipped.
+Background-origin: whether background should be places in the padding box, the border-box, or the content box.
+Background-size: determines the size of the background image. This allows stretching smaller images to fit a page.
+	Border Properties: Borders are still what we’re used to. Rounded corners can be created. For example,
+div{
+border: 2px solid;
+border-radius: 25px;
+}
+
+Q4.) Name a few CSS style components.
+A4.) A CSS style consists of several components that define how an HTML element should be visually presented on a web page. These components work together to create the desired appearance of web content. The main components of a CSS style include:
+
+1. Selectors: Selectors are used to target specific HTML elements to which the style will be applied. CSS selectors can target elements by their HTML tag name (element selectors), class names (class selectors), IDs (ID selectors), attributes, and more.
+
+
+Example selectors:
+- Element selector: ‘p { ... }’
+- Class selector: ‘.my-class { ... }’
+- ID selector: ‘#my-id { ... }’
+
+2. Properties: Properties are the individual style attributes that you want to set for the selected elements. Each property corresponds to a specific aspect of an element's appearance, such as color, font size, margin, padding, or border.
+
+Example properties:
+- ‘color’: Sets the text color.
+- ‘font-size’: Defines the font size.
+- ‘margin’: Specifies the margin around an element.
+- ‘padding’: Sets the padding inside an element.
+- ‘border’: Controls the border of an element.
+
+3. Values: Values are the settings or values you assign to CSS properties. Values can be specific (e.g., ‘12px’, ‘red’), relative (e.g., ‘em’, ‘%’), or keyword-based (e.g., ‘bold’, ‘left’).
+Example values:
+- ‘12px’: A specific pixel size.
+- ‘red’: A specific color.
+- ‘1em’: Relative size based on the element's font size.
+- ‘left’: A keyword value indicating alignment.
+
+4. Declaration Block: A declaration block is a set of one or more property-value pairs enclosed within curly braces ‘{}’. Each property-value pair is separated by a semicolon ‘;’.
+Example declaration block:
+p {
+color: blue;
+font-size: 16px;
+}
+
+5. Rule Set: A rule set is a complete CSS rule that consists of a selector and its associated declaration block. It defines which HTML elements should be styled and how they should be styled.
+
+Example rule set:
+p {
+color: blue;
+font-size: 16px;
+}
+
+6. Stylesheet: A stylesheet is a collection of CSS rule sets. Stylesheets can be included in an HTML document using the ‘<link>’ element (external stylesheet) or within a ‘<style>’ element in the HTML ‘<head>’ section (internal stylesheet).
+
+Example external stylesheet link:
+<link rel="stylesheet" type="text/css" href="styles.css">
+Example internal stylesheet:
+<style>
+p {
+color: blue;
+font-size: 16px;
+}
+</style>
+By combining these components, you can create sophisticated and customized styles to control the visual presentation of HTML elements on your web page.
+
+
+Q5.) What do you understand by CSS opacity?
+A5.) The CSS opacity property sets the opacity of an element. It is the degree to which content behind an element is hidden, and is the opposite of transparency. The syntax is:
+opacity: 0.9;
+opacity: 90%;
+
+/* Global values */
+opacity: inherit;
+opacity: initial;
+opacity: revert;
+opacity: revert-layer;
+opacity: unset;
+For example:
+.card {
+  transition:
+    opacity 5s,
+    display 5s;
+  background-color: orange;
+
+  transition-behavior: allow-discrete;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.card.hidden {
+  display: none;
+  opacity: 0;
+}
+
+Q6.) How can the background color of an element be changed?
+A6.) The background color of an HTML element can be changed using the background-color CSS property and giving it a value of a color. For example:
+p{
+	background-color: blue;
+}
+
+Q7.) How can image repetition of the backup be controlled?
+A7.) This task can be achieved by using the background-repeat property that will help us to control the repetition of the image. The background-repeat property in CSS is used to repeat the background image both vertically and horizontally. It also decides whether the background image will be repeated or not. Syntax is: 
+background-repeat: repeat|repeat-x|repeat-y|no-repeat|initial|inherit;
+For example:
+<html>
+<head>
+    <title>background-repeat property</title>
+    <style>
+        body {
+            margin-top: 40px;
+            background-image: url(
+"https://media.premierleague.com/wp-content/uploads/league-77.png");
+            background-repeat: repeat-x;
+            background-size: 150px 100px;
+        }
+        h1 {
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <h1>Premier League</h1>
+</body>
+</html>
+
+Q8.) What is the use of the background-position property?
+A8.) The background-position property in CSS is mainly used to sets the initial position for the background image i.e. it is used to set an image at a certain position. The position that is relative to the positioning layer, can be set by using the background-origin property. Syntax is:
+background-position: value;
+
+The property values are:
+•	background-position: left top: This property is used to set the image at the left top.
+•	background-position: left center: This property is used to set the image at the left center.
+•	background-position: left bottom: This property is used to set the image at the left bottom.
+•	background-position: center top: This property is used to set the image at the center top position.
+•	background-position: center center: This property is used to set the image at the center center position.
+•	background-position: center bottom: This property is used to set the image at the center bottom position.
+•	background-position: right top: This property is used to set the image at the right top position.
+•	background-position: right center: This property is used to set the image at the right center position.
+•	background-position: right bottom: This property is used to set the image at the right bottom position.
+•	background-position: 25% 75%: This property is used to set the image at 25% from the left and 75% from the top.
+•	background-position: 30px 80px;: This property is used to set the image at the 30px from left and 80px from top.
+For example:
+<html>
+<head>
+<title>FantasyPremierLeague</title>
+<style>
+	{
+	background-image: url ("https://media.fantasypremierleague.org/wp-content/uploads/background-position1.png")
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left top;
+	}
+</style>
+</head>
+</html>
+
+Q9.) Which property controls the image scroll in the background?
+A9.) The background-attachment property in CSS is used to specify the kind of attachment of the background image with respect to its container. It can be set to scroll or remain fixed. It can be applied to all HTML elements. The syntax is: 
+Background-attachment: scroll | fixed | local | initial | inherit; 
+For example,
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <style> 
+        #example { 
+                background-image: 
+url("https://media.geeksforgeeks.org/wp-content/uploads/geeks-25.png"); 
+                background-position: center; 
+                background-repeat: no-repeat; 
+                background-attachment: scroll; 
+        } 
+    </style> 
+</head> 
+      
+<body style="text-align:center"> 
+    <h1 style="color:green">GeeksforGeeks</h1> 
+    <h2> background-attachment: scroll;</h2><br><br> 
+          
+    <div id="example"> 
+        <p> 
+            Prepare for the Recruitment drive of product 
+            based companies like Microsoft, Amazon, 
+            Adobe etc with a free online placement 
+            preparation course. The course focuses on 
+            various MCQ's & Coding question likely to 
+            be asked in the interviews & make your 
+            upcoming placement season efficient and 
+            successful. 
+       </p> 
+        <br>     
+        <p> 
+            This course is especially designed for the 
+            Java apprentices who want to hone their 
+            skills in Java for Coding Interviews and 
+            Competitive Programming. No matter if you 
+            are a school student or college student, 
+            if you have the zeal of programming, this 
+            is the right time to start. 
+        </p> 
+        <br> 
+        <br> 
+        <br> 
+        <p> 
+            Prepare for the Recruitment drive of product 
+            based companies like Microsoft, Amazon, 
+            Adobe etc with a free online placement 
+            preparation course. The course focuses on 
+            various MCQ's & Coding question likely to 
+            be asked in the interviews & make your 
+            upcoming placement season efficient and 
+            successful 
+        </p> 
+        <br> 
+        <br> 
+        <br> 
+        <p> 
+            This course is especially designed for the 
+            Java apprentices who want to hone their 
+            skills in Java for Coding Interviews and 
+            Competitive Programming. No matter if you 
+            are a school student or college student, 
+            if you have the zeal of programming, this 
+            is the right time to start. 
+        </p> 
+  
+        <br> 
+        <br> 
+        <br> 
+         <p> 
+            Prepare for the Recruitment drive of product 
+            based companies like Microsoft, Amazon, 
+            Adobe etc with a free online placement 
+            preparation course. The course focuses on 
+            various MCQ's & Coding question likely to 
+            be asked in the interviews & make your 
+            upcoming placement season efficient and 
+            successful 
+        </p> 
+      
+    </div> 
+</body> 
+</html>
+
+Q10.) Why should background and color be used as separate properties?
+A10.) The background property is a complex property in CSS, and if it is combined with color, the complexity will further increase. Also, color is an inherited property while the background is not. So this can make confusion further.
+
+Q11.) How to center block elements using CSS1?
+A11.) There are two steps to center a block-level element:
+1.	Define the external width: We need to define the external width. Block-level elements have the default width of 100% of the webpage, so for centering the bloc element, we need space around it. So, for generating the space, we are giving it a width. 
+
+2.	Set the left-margin and the right-margin of the element to auto: Since we produced a remaining space by providing external width so now, we need to align that space properly that’s why we should use margin property. Margin is a property that tells how to align a remaining space. So, for centering the element you must set left-margin to auto and right-margin to auto. The syntax is:
+
+element {
+	width: 200px;
+	margin: auto;
+}
+For example,
+<!DOCTYPE html> 
+<html lang="en">     
+<head> 
+    <style> 
+        *{ 
+            margin: 0px; 
+            padding: 0px; 
+            box-sizing: border-box; 
+        } 
+        body { 
+            background: brown; 
+        } 
+        #box { 
+            background: black; 
+            color: white; 
+            text-align: center; 
+        } 
+        
+        /* For centering the element */ 
+        #box { 
+            width:300px; 
+            margin:10rem auto; 
+        } 
+    </style> 
+</head>
+<body>     
+      <div id="box"> 
+        <h3>this is a box</h3> 
+      </div> 
+</body>     
+</html>
+
+Q12.) How to maintain the CSS specifications?
+A12.) A CSS declaration is made up of a selector, or a group of selectors, and a declaration block. Inside of the declaration block, there are declarations with properties and values.
+The order of those declarations may seem unimportant at first glance, but defining an order does hold some advantages. An obvious advantage, which is especially important in larger teams, is consistency. Some developers write declarations randomly, some alphabetically, and some group them by type. Grouping is considered to be a good choice because it makes sense to write the positioning-related declarations first as some elements could be removed from the flow. The browser digests it first, and the developer can read the block with ease knowing where the element will be positioned right away. In order to maintain the CSS style specifications, following order is maintained:
+•	Positioning
+•	Box Model
+•	Typographic
+•	Visual 
+
+Q13.) What are the ways to integrate CSS as a web page?
+A13.) There are three ways to integrate CSS as a webpage: Inline CSS, Internal CSS and External CSS.
+•	Inline CSS: Style rules can be applied to individual HTML elements using inline CSS. Inlining CSS is the process of embedding CSS into an HTML file rather than using an external CSS file. Because inline CSS only allows us to apply a single style to one HTML element, it's only useful for establishing unique properties. Inline CSS is advantageous since it decreases the number of files that the browser must download before the web page can be shown. The browser loads an HTML file first, then downloads the CSS file when using external CSS. We only need to download one HTML file instead of two using inline CSS, which speeds up the process. The inline styles will only affect the HTML element to which the style attribute with CSS-property values is applied. For example,
+<body>
+
+<p style=” color: red; font-size: 20px;”>This is our first HTML code.</p>
+
+ <p>This is our second HTML code</p>
+
+</body>
+
+Q14.) What are embedded style sheets?
+A14.) Embedded style sheets refer to when you embed style sheet information into an HTML document using the <style> element. You do this by embedding the style sheet information within <style> </style> tags in the head of your document. The syntax for embedded style sheets is exactly same as other CSS code. The <style> tag is placed between the <head> </head> tag. Syntax is: 
+<style>
+   p {
+        font-family: georgia, serif; 
+        font-size: x-small;
+    }
+   hr {
+        color: #ff9900; 
+        height: 1px; 
+    }
+   a:hover {
+        color: #ff0000; 
+        text-decoration: none;
+    }
+</style>
+
+
+
+Q15.) What are the external style sheets?
+A15.) To apply a rule to multiple pages, an external style sheet is used. An external style sheet is a separate CSS file that can be accessed by creating a link within the head section of the webpage. Multiple webpages can use the same link to access the stylesheet. The link to an external stylesheet is placed within the head section of the page.
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+The actual stylesheet file will contain CSS rules that are then applied across the entire page. For example,
+body {
+background-color: ghostwhite;
+}
+h1 {
+color: blue; font-size: 20px; font-family: verdana; font-style: italic;
+}
+
+Q16.) What are the advantages and disadvantages of using external style sheets?
+A16.) The advantages are:
+1.)	With the help of External Style Sheets, the styles of numerous documents can be organized from one single file.
+2.)	In External Style Sheets, Classes can be made for use on numerous HTML element types in many forms of the site.
+3.)	In complex contexts, Methods like selector and grouping can be implemented to apply styles.
+The disadvantages are:
+1.)	An extra download is essential to import style information for each file.
+2.)	The execution of the file may be deferred till the external style sheet is loaded.
+3.)	While implementing style sheets, we need to test Web pages with multiple browsers in order to check compatibility issues.
+
+Q17.) What is the meaning of the CSS selector?
+A17.) A CSS selector is the first part of a CSS rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the subject of the selector. For example,
+h1 {
+	color: blue;
+	background-color: yellow;
+}
+p {
+	color: red;
+}
+
+Q18.) What are the media types allowed by CSS?
+A18.) The media types allowed by CSS are:
+•	All: Suitable for all devices.
+•	Braille: Intended for braille tactile feedback devices.
+•	Embossed: Intended for paged braille printers.
+•	Handheld: Intended for handheld devices (typically small screen, limited bandwidth).
+•	Print: Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on paged media for information about formatting issues that are specific to paged media.
+•	Projection: Intended for projected presentations, for example projectors. Please consult the section on paged media for information about formatting issues that are specific to paged media.
+•	Screen: Intended primarily for color computer screens.
+•	Speech: Intended for speech synthesizers. Note: CSS2 had a similar media type called 'aural' for this purpose.
+•	Tty: Intended for media using a fixed-pitch character grid (such as teletypes, terminals, or portable devices with limited display capabilities). Authors should not use pixel units with the "tty" media type.
+•	Tv: Intended for television-type devices (low resolution, color, limited-scroll ability screens, sound available).
+
+Q19.) What is the rule set?
+A19.) A CSS rule set contains one or more selectors and one or more declarations. The selector(s) points to an HTML element. The declarations are element style with property and value. The rule set is the main building block of CSS sheet. For example, the selector which is h1, points to an HTML element. The declaration, which are color: blue and text-align: center style the element with a property and a value.
+h1 {
+	color: blue;
+	text-align: center;
+}
+Q20.) Create Layouts
+A20.) The code to create the given layouts:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .grid{
+            display: grid;
+            border: 2px solid;
+            padding: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 450px 450px;
+        }
+        .card{
+            background-color: lightcoral;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+        .card-image{
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .card-title{
+            font-size: larger;
+            margin-top: 10px;
+        }
+        .card-description{
+            font-size: large;
+            color: black;
+        }
+        .card-button{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .card-button:hover{
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+    <div class="card">
+        <img src="/images1.jpg" alt="Card Image" class="card-image">
+        <h2 class="card-title">Card Title</h2>
+        <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus labore necessitatibus rem eius, nisi aspernatur
+        vel molestias impedit iste doloremque nesciunt est porro eligendi id enim, fuga ab dolorem quasi?</p>
+        <a href="#" class="card-button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="/images1.jpg" alt="Card Image" class="card-image">
+        <h2 class="card-title">Card Title</h2>
+        <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus labore necessitatibus rem eius, nisi aspernatur
+        vel molestias impedit iste doloremque nesciunt est porro eligendi id enim, fuga ab dolorem quasi?</p>
+        <a href="#" class="card-button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="/images1.jpg" alt="Card Image" class="card-image">
+        <h2 class="card-title">Card Title</h2>
+        <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus labore necessitatibus rem eius, nisi aspernatur
+        vel molestias impedit iste doloremque nesciunt est porro eligendi id enim, fuga ab dolorem quasi?</p>
+        <a href="#" class="card-button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="/images1.jpg" alt="Card Image" class="card-image">
+        <h2 class="card-title">Card Title</h2>
+        <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus labore necessitatibus rem eius, nisi aspernatur
+        vel molestias impedit iste doloremque nesciunt est porro eligendi id enim, fuga ab dolorem quasi?</p>
+        <a href="#" class="card-button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="/images1.jpg" alt="Card Image" class="card-image">
+        <h2 class="card-title">Card Title</h2>
+        <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus labore necessitatibus rem eius, nisi aspernatur
+        vel molestias impedit iste doloremque nesciunt est porro eligendi id enim, fuga ab dolorem quasi?</p>
+        <a href="#" class="card-button">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="/images1.jpg" alt="Card Image" class="card-image">
+        <h2 class="card-title">Card Title</h2>
+        <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus labore necessitatibus rem eius, nisi aspernatur
+        vel molestias impedit iste doloremque nesciunt est porro eligendi id enim, fuga ab dolorem quasi?</p>
+        <a href="#" class="card-button">Learn More</a>
+    </div>
+</div>
+</body>
+</html>
+
