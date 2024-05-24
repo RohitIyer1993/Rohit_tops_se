@@ -1,0 +1,149 @@
+MODULE (JAVASCRIPT BASIC & DOM) – 4
+
+Q1.) What is JavaScript? How to use it?
+A1.) JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. JavaScript is used in Web Development, Web Applications, Presentations, Server Applications, Web Servers, Games, Art, Smartwatch Apps. 
+
+Q2.) How many types of variables in JavaScript?
+A2.) There are three kinds of variable declarations in JavaScript: var, let, const.
+•	Var: Declares a variable, optionally initializing it to a value.
+•	Let: Declares a block-shaped, local variable, optionally initializing it to a value.
+•	Const: Declares a block-shaped, read-only named constant.
+
+Q3.) Define a data type in JS.
+A3.) Data types describe the different types or kinds of data that we work with and store in variables. In JavaScript, there are five basic, or primitive, types of data. The five most basic types of data are strings, numbers, Booleans, undefined, and null. We refer to these as primitive data types. A single variable can only store a single type of data.
+
+Q4.) Write a mul Function Which will Work Properly When invoked With Following Syntax.
+A4.) 
+
+Q5.) What is the difference between undefined and undeclare in JavaScript?
+A5.) The difference between undefined and undeclared variables in JavaScript is: Undefined variable means a variable has been declared but does not contain any value, on the other hand undeclared variable means that the variable does not exists in the program at all.
+Q10.) What is a Condition Statement?
+A10.) Conditional statements control behavior in JavaScript and determine whether or not pieces of code can run. There are multiple different types of conditionals in JavaScript including:
+•	“If” statements: where if a condition is true it is used to specify execution for a block of code.
+•	“Else” statements: where if the same condition is false, it specifies the execution for a block of code.
+•	“Else if” statements: this specifies a new test if the first condition is false.
+
+Q18.) What is a Loop and Switch Case in JavaScript define that?
+A18.) Loops are used in JavaScript to perform repeated tasks based on a condition. Conditions typically return true or false. A loop will continue running until the defined condition returns false.
+The switch statement evaluates an expression. The value of the expression is then compared with the values of each case in the structure. If there is a match, the associated block of code is executed. The switch statement is often used together with a break or a default keyword (or both).
+
+Q19.) What is the use of is Nan() function?
+A19.) The JavaScript isNaN() Function is used to check whether a given value is an illegal number or not. It returns true if the value is a NaN else returns false. It is different from the Number.isNaN() Method.
+
+Q20.) What is the difference between && and || in JavaScript?
+A20.) The difference is that AND condition evaluates both conditions must e true for the overall condition to be true, while OR evaluates one condition must be true for the overall condition to be true.
+
+Q21.) What is the use of Void (0)?
+A21.) Void(0) always returns the actual primitive value undefined.
+Q30.) What are the looping structures in JavaScript? Any one example.
+A30.) The looping structures in JavaScript are: for, while, for/in, for/of.
+
+For example: for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+} 
+
+Q47.) What is the drawback of declaring methods directly in JavaScript objects?
+A47.) The major drawback of declaring methods directly in JavaScript are:
+1.)	Cannot call private method outside class.
+2.)	Create memory inefficiency when different objects are created for the same class, as a new copy of the method would be created for each instance.
+
+Q57.) How many types of JS Event? How to use it?
+A57.) There are many JS events. Some of the most commonly used JS events are:
+1.)	Onchange: An HTML element has been changed.
+2.)	Onclick: The user clicks an HTML element.
+3.)	Onmouseover: The user moves the mouse over an HTML element.
+4.)	Onmouseout: The user moves the mouse away from an HTML element.
+5.)	Onkeydown: The user pushes a keyboard key.
+6.)	Onload: The browser has finished loading the page.
+
+The syntax of the events are: <element event=”some JavaScript”>
+
+Q59.) What is Bom vs Dom in JS?
+A59.) The difference is:
+1.)	DOM mainly focuses on the structure of the displayed document, while BOM mainly focuses on browser-specific functionality.
+2.)	DOM facilitates a standardized interface to access and modify the elements and content of an HTML or XML document, while BOM allows JavaScript to interact with browser features beyond the scope of manipulating the document structure.
+3.)	In DOM, when an HTML document gets loaded in the browser, then it becomes a document object, while in BOM, the window object will be created automatically by the browser.
+
+Q60.) Array vs object differences in JS?
+A60.) The differences are:
+1.)	Arrays are best to use when the elements are numbers, while Objects are best to use when the elements’ strings (text).
+2.)	The data inside an array is known as Elements, while the data inside objects are known as Properties which consists of a key and a value.
+3.)	The elements can be manipulated using [ ], while in objects, the properties can be manipulated using both .DOT notation and [ ].
+4.)	In Array, the elements can be popped out of an array using the pop() function, while in objects, The keys or properties can be deleted by using the delete keyword.
+
+Q71.) What is negative Infinity?
+A71.) The Number.NEGATIVE_INFINITY static data property represents the negative Infinity value. It is explained as something that is lower than any other number.
+
+Q72.) Which company developed JavaScript?
+A72.) Brandon Eich of Netscape company developed JavaScript.
+
+Q73.) Write the code for adding new elements dynamically?
+A73.) The code for adding new elements is:
+document.createElement("<tagName>");  
+// Where <tagName> can be any HTML 
+// tagName like div, ul, button, etc.
+
+// newDiv element has been created
+For Example: let newDiv = document.createElement("div");
+
+Q74.) What is the difference between ViewState and SessionState?
+A74.) The difference is :
+1.)	In ViewState, maintained at page level only, while in SessionState, maintained at session level. 
+2.)	In ViewState, it will retain values in the event of a postback operation occurring, while in SessionState, user data remains in the server. Data is available to user until the browser is closed or there is session expiration.
+3.)	In ViewState, information is stored on the client’s end only, while in SessionState, information is stored on the server.
+
+Q75.) What is === operator?
+A75.) JavaScript Strict Equality Operator is used to compare two operands and return true if both the value and type of operands are the same. Since type conversion is not done, so even if the value stored in operands is the same but their type is different the operation will return false. 
+
+The Syntax is:
+x===y
+
+Q76.) How can the style/class of an element be changed?
+A76.) To change the name of the class of an HTML element using document.querySelector, you can follow these steps:
+1.)	Identify the HTML element whose class name you want to change.
+2.)	Use the document.querySelector() method to select that element by passing its CSS selector as an argument. This method returns the first element in the document that matches the selector.
+3.)	Access the classList property of the selected element to manipulate its classes.
+4.)	Use the replace(oldClass, newClass) method of the classList property to replace the old class name with the new class name.
+
+Q77.) How to read and write a file using JavaScript?
+A77.) The fs.readFile() and rs.writeFile() methods are used to read and write of a file using javascript. The file is read using the fs.readFile() function, which is an inbuilt method. This technique reads the full file into memory and stores it in a buffer.
+The syntax is: fs.readFile(file_name, encoding, callback_function)
+The fs.writeFile() function is used to write data to a file in an asynchronous manner. If the file already exists, it will be replaced.
+The syntax is: fs.writeFile(file_name, data, options, callback)
+
+Q78.) How can you convert the string of any base to an integer in JavaScript?
+A78.) o convert a string to an integer parseInt(), Number(), and Unary operator (+) function is used in JavaScript. The parseInt() function returns NaN ( not a number) when the string doesn’t contain number. If a string with a number is sent, then only that number will be returned as the output. This function won't accept spaces. If any particular number with spaces is sent, then the part of the number that presents before space will be returned as the output.
+
+Q79.) What is the function of the delete operator?
+A79.) The delete operator in JavaScript is used to remove a property from an object. It works for both properties owned by the object and those inherited from prototypes. When used on an array item, it creates a ‘hole’ in the array.
+Syntax is: delete object
+		//or
+	       delete object.property	
+
+
+Q80.) What are all the types of Popup boxes available in JavaScript?
+A80.) JavaScript has three types of Popup boxes:
+1.)	Alert Box: An alert box is often used if you want to make sure information comes through to the user. When an alert box pops up, the user will have to click “OK”
+2.)	Confirm Box: A confirm box is often used if you want the user to verify or accept something. When a confirm box pops up, the user will have to click either “OK” or “Cancel” to proceed. If the user clicks “OK”, the box returns true. If the user clicks “Cancel”, the box return false.
+3.)	Prompt Box: A prompt box is often used if you want the user to input a value before entering a page. When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value. If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+
+Q81.) How can a page be forced to load another page in JavaScript?
+A81.) In JavaScript, you can force a page to load another page by using the window.location object. There are a few methods to achieve this. To force a page to load another page in JavaScript, we have multiple approaches:
+
+Below are the approaches used to force a page to load another page in JavaScript:
+1.)	Using wind.location.replace: The replace function is used to navigate to  a new URL without adding a new record to the history.
+2.)	Using window.location.assign Property: 
+•	The assign function is similar to the href property as it is also used to navigate to a new URL.
+•	The assign method, however, does not show the current location, it is only used to go to a new location.
+•	Unlike the replace method, the assign method adds a new record to history (so that when the user clicks the “Back” button, he/she can return to the current page).
+
+Q82.) What are the disadvantages of using innerHTML in JavaScript?
+A82.) The disadvantages are:
+•	The use if innerHTML is very slow.
+•	Preserves event handlers attached to any DOM elements.
+•	Content is replaced everywhere.
+•	Appending to innerHTML is not supported.
+•	Old content replaced issue.
+•	Can break the document.
+•	Can also be used for Cross-site Scripting (XSS).
+
