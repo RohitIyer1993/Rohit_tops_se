@@ -1,0 +1,71 @@
+MODULE (Bootstrap Basic & Advanced) – 6
+
+Q1.) What are the advantages of Bootstrap?
+A1.) The Advantages of Bootstrap are:
+•	Speedy Development.
+•	Responsive Design.
+•	Consistent UI Elements.
+•	Cross-Browser Compatibility.
+•	Flexible Customization.
+•	Community Support.
+
+Q2.) What is a Bootstrap Container, and how does it work?
+A2.) Containers are fundamental building block of bootstrap that contain, pad, and align your content within a given device or viewport.
+Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.
+Bootstrap comes with three different containers:
+•	.container, which sets a max-width at each responsive breakpoint.
+•	.container-fluid, which is width: 100% at all breakpoints.
+•	.container-{breakpoint}, which is width: 100% until the specified breakpoint.
+
+Q3.) What are the default Bootstrap text settings?
+A3.) Bootstrap 5 uses a default font-size of 1rem (16px by default), and its line-height is 1.5. In addition, all <p> elements have margin-top: 0 and margin-bottom: 1rem (16px by default).
+
+Q4.) What do you know about the Bootstrap Grid System?
+A4.) The Bootstrap grid system wors in the following ways:
+•	Grid supports six responsive breakpoints: Breakpoints are based on min-width media queries, meaning they affect that breakpoint and all those above it (e.g., .col-sm-4 applies to sm, md, lg, xl, xxl). This means you can control container and column sizing and behaviour by each breakpoint.
+•	Containers center and horizontally pad your content: Use .container for a responsive pixel width, .container-fluid for width: 100% across all viewports and devices, or a responsive container (e.g., .container-md) for a combination of fluid and pixel widths.
+•	Rows are wrappers for columns: Each column has horizontal padding (called a gutter) for controlling the space between them. This padding is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to uniformly apply column sizing and gutter classes to change the spacing of your content.
+•	Columns are incredibly flexible: There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. Column classes indicate the number of template columns to span (e.g., col-4 spans four). widths are set in percentages so you always have the same relative sizing.
+•	Gutters are also responsive and customizable: Gutter classes are available across all breakpoints, with all the same sizes as our margin and padding spacing. Change horizontal gutters with .gx-* classes, vertical gutters with .gy-*, or all gutters with .g-* classes. .g-0 is also available to remove gutters.
+•	Sass variables, maps, and mixins power the grid: If you don’t want to use the predefined grid classes in Bootstrap, you can use our grid’s source Sass to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
+
+
+
+
+Q5.) What is the difference between Bootstrap 4 and Bootstrap 5?
+A5.) Some of the differences between bootstrap 4 and 5 are:
+BASIS	BOOTSTRAP 4	BOOTSTRAP5
+Grid System	It has 5 tiers (xs, sm, md, lg, xl).	It has 6 tiers (xs, sm, md, lg, xl, xxl).
+Color	It has limited colors.	Extra colors added with the looks, a card improved colors palette. There are various shades available to choose.
+jQuery	It has jQuery and all related plugins.	jQuery is removed and switched to vanilla JS with some working plugins.
+Gutter	We use. glutter with font-size in px.	We use. g* with font-size in rem
+Navbar	We have inline-block property and we will get white dropdown as default for dropdown-menu-dark class.	Inline-block property is removed and we will get black dropdown as default for dropdown-menu-dark class.
+
+Q6.) What is a Button Group, and what is the class for a basic Button Group?
+A6.) “Button Groups” in Bootstrap is a class of name “btn-group” which is used to create a series of buttons in groups (without spaces) vertically or horizontally.
+Syntax is: <div class = “btn-group”>
+			<button type= “button” lass = “btn”>Click</button>
+	      </div>
+
+Q7.) How can you use Bootstrap to make thumbnails?
+A7.) The following steps are used to make thumbnails:
+•	Include Bootstrap and jQuery CDN into the <head> tag before all other stylesheets to load our CSS.
+•	Add <div> tag in the HTML body with class row. In that <div> create four div sections to create four images.
+•	Add “col-sm-6” and “co-md-3” to four div sections which creates webpage responsive.
+•	Add <a> tag with class value thumbnail to define the link of the image in the next line.
+
+Q8.) In Bootstrap 4, what is flexbox?
+A8.) The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+
+Q9.) How can one create an alert in Bootstrap?
+A9.) To create an alert in Bootstrap, we use following steps:
+•	We will use the .alert class along with the contextual classes that are used to display the alert message in the application.
+•	The alert classes like .alert-success, .alert-info, .alert-warning, .alert-danger, .alert-primary, .alert-secondary, .alert-light, and .alert-dark are been used to represent the alert message with different behaviour.
+•	We will generate the dynamic alert message when the user clicks on the button.
+
+Q10.) What is a bootstrap card and how would you create one?
+A10.) A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. 
+It replaces the use of panels, wells and thumbnails. All of it can be used in a single container called card.
+
+
+
