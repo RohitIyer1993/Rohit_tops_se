@@ -1,0 +1,18 @@
+MODULE (JQuery Basic, Effects & Advanced) – 5
+
+Q1.) What is jQuery?
+A1.) jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+
+Q2.) How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery ,JQuery Animation?
+A2.) There are two ways to add or remove class in jQuery:
+1.)	Using the addClass() and removeClass() methods: The addClass() and removeClass() methods are respectively used to add and remove the CSS classes when there is a need to add or remove them from the webpage on the occurrence of an event.
+2.)	Using the toggleClass() method: The toggleClass() method in jQuery is built to add and remove the class based on the occurrence of an event. It will check whether the class exists in the class list or not. If the class is there in the list, it will remove the class from there. Otherwise, it will add the class to the element.
+
+The different ways to apply CSS using jQuery are:
+1.)	jQuery CSS() Method: The CSS() method sets or returns one or more style properties for the selected elements.
+2.)	Return a CSS Property: Returns a specified CSS property.
+3.)	Set a CSS Property: This method sets a CSS property to all matched elements.
+4.)	Set Multiple CSS Properties: This sets a CSS property to multiple elements
+
+Q3.) How to create slider with animation?
+A3.) 
