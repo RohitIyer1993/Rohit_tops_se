@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Validation</title>
+    <style>
+        body {
+            background-color: rebeccapurple;
+        }
+          
+        .form-container {
+            padding: 30px;
+            max-width: 350px;
+            background: white;
+            box-sizing: border-box;
+        }
+          
+        .container {
+            margin: 100px auto;
+            max-width: 350px;
+            box-sizing: border-box;
+        }
+          
+        .form-container .head {
+            text-align: center;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+          
+        .inputs {
+            padding-top: 10px;
+        }
+          
+        form {
+            width: 100%;
+            background-color: white;
+        }
+          
+        form label {
+            display: block;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: grey;
+            line-height: 30px;
+        }
+          
+        input {
+            display: block;
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid rgb(133, 133, 133);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+          
+        button {
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 7px;
+            text-align: center;
+            background: #3fb996;
+            border: hidden;
+            color: white;
+            font-weight: bold;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+          
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    const PswdCheck = (text, PasswordError) => {
+
+       let condition1 =  /(?=.*\d)/;
+       let condition2 = /(?=.*[a-z])/;
+       let condition3 = /(?=.*[A-Z])/;
+       let condition4 = /[a-zA-Z0-9]{8,}/;
+
+       PasswordError.style.color = "red";
+
+       if(!text.match(condition1))
+       {
+        PasswordError.style.display = "block";
+        PasswordError.innerText = "Password should contain at least 1 digit";
+        window.alert("Password should contain at least 1 digit")
+       }
+
+       if(!text.match(condition2))
+       {
+        PasswordError.style.display = "block";
+        PasswordError.innerText = "Password should contain at least 1 lowercase";
+        window.alert("Password should contain at least 1 lowercase");
+       }
+
+       if(!text.match(condition3))
+       {
+        PasswordError.style.display = "block";
+        PasswordError.innerText = "Password should contain at least 1 uppercase";
+        window.alert("Password should contain at least 1 uppercase");
+       }
+
+       if(!text.match(condition4))
+       {
+        PasswordError.style.display = "block";
+        PasswordError.innerText = "Password should contain at least 8 characters";
+        window.alert("Password should contain at least 8 characters");
+       }
+
+       PasswordError.style.display = "none";
+       return;
+    }
+
+    let password = document.getElementById("password");
+    let PasswordError = document.getElementById("PasswordError");
+    PasswordError.style.display = "none";
+    password.addEventListener('keypress', event => 
+    {
+        let text = password.value + `${event.key}`;
+        PswdCheck(text,PasswordError);
+    });
+
+
+    const EmailCheck = (text, EmailError) => 
+    {
+        let condition = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        EmailError.style.color = "red";
+
+        if(!text.match(condition))
+        {
+            EmailError.style.display = "block";
+            EmailError.innerText = "Invalid Email Address";
+            window.alert("Invalid Email Address");
+            return;
+        }
+
+        EmailError.style.display = "none";
+        return;
+    }
+
+    let email = document.getElementById("email");
+    let EmailError = document.getElementById("EmailError");
+
+    EmailError.style.display = "none";
+    email.addEventListener('keypress', event => 
+    {
+        let text = email.value + `${event.key}`;
+        EmailCheck(text, EmailError);
+    });
+
+
+    const ConfirmPswdCheck = (text, initPassword, ConfPasswordError) => 
+    {
+        ConfPasswordError.style.color = "red";
+
+        if(!text == initPassword)
+        {
+            ConfPasswordError.style.display = "block";
+            ConfPasswordError.innerText = "Passwords don't match";
+            window.alert("Passwords don't match");
+            return;
+        }
+
+        ConfPasswordError.style.display = "none";
+        return;
+    }   
+
+    let confPassword = document.getElementById("ConfirmPswd");
+    let ConfirmPswdError = document.getElementById("ConfirmPswdError");
+    ConfPasswordError.style.display = "none";
+    confPassword.addEventListener('keypress', event => 
+    {
+        let text = confPassword.value + `${event.key}`;
+        let initPasswrd = password.value;
+        ConfirmPasswordCheck(text, initPasswrd, ConfPasswordError);
+    })
+
+
+    </script>
+    <div class="container">
+        <div class="form-container">
+            <div class="head">
+                <h3>Sign Up</h3>
+            </div>
+            <form class="inputs">
+                <label for="email">Email</label>
+                <input id="email" name="email" value="" />
+                <p id="EmailError"></p>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" value="" />
+                <p id="PasswordError"></p>
+
+                <label for="confirmpswd">Confirm Password</label>
+                <input name="ConfirmPswd" id="ConfirmPswd">
+                <p id="ConfirmPswdError"></p>
+
+                <button id="submit" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
